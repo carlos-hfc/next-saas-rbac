@@ -1,0 +1,19 @@
+{
+  "name": "@saas/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "library.js",
+    "next.js",
+    "node.js"
+  ],
+  "devDependencies": {
+    "@ch-faustino/eslint-config": "^1.0.1",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "@saas/prettier": "workspace:*"
+  },
+  "prettier": "@saas/prettier",
+  "eslintConfig": {
+    "extends": ["./library.js"]
+  }
+}

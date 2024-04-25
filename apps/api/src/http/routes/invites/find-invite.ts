@@ -14,7 +14,6 @@ export async function findInvite(app: FastifyInstance) {
       schema: {
         tags: ["Invites"],
         summary: "Get invite details",
-        security: [{ bearerAuth: [] }],
         params: z.object({
           inviteId: z.string().uuid(),
         }),

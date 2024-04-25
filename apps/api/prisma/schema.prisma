@@ -35,7 +35,7 @@ model Token {
   type      TokenType
   createdAt DateTime  @default(now())
 
-  user   User   @relation(fields: [userId], references: [id])
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId String
 
   @@map("tokens")
@@ -50,7 +50,7 @@ model Account {
   provider          AccountProvider
   providerAccountId String          @unique
 
-  user   User   @relation(fields: [userId], references: [id])
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId String
 
   @@unique([provider, userId])
@@ -69,10 +69,10 @@ model Invite {
   role      Role
   createdAt DateTime @default(now())
 
-  author User?   @relation(fields: [userId], references: [id])
-  userId String?
+  author   User?   @relation(fields: [authorId], references: [id], onDelete: SetNull)
+  authorId String?
 
-  organization   Organization @relation(fields: [organizationId], references: [id])
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
   organizationId String
 
   @@unique([email, organizationId])
@@ -84,10 +84,10 @@ model Member {
   id   String @id @default(uuid())
   role Role   @default(MEMBER)
 
-  organization   Organization @relation(fields: [organizationId], references: [id])
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
   organizationId String
 
-  user   User   @relation(fields: [userId], references: [id])
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId String
 
   @@unique([organizationId, userId])
@@ -104,7 +104,7 @@ model Organization {
   createdAt                 DateTime @default(now())
   updatedAt                 DateTime @updatedAt
 
-  owner   User   @relation(fields: [ownerId], references: [id])
+  owner   User   @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   ownerId String
 
   invites  Invite[]
@@ -123,10 +123,10 @@ model Project {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  owner   User   @relation(fields: [ownerId], references: [id])
+  owner   User   @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   ownerId String
 
-  organization   Organization @relation(fields: [organizationId], references: [id])
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
   organizationId String
 
   @@map("projects")

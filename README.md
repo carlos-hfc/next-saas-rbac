@@ -7,7 +7,7 @@ This project contains all the necessary boilerplate to setup a multi-tenant SaaS
 ### Authentication
 
 - :ballot_box_with_check: It should be able to authenticate using e-mail & password;
-- :white_large_square: It should be able to authenticate using Github account;
+- :ballot_box_with_check: It should be able to authenticate using Github account;
 - :ballot_box_with_check: It should be able to recover password using e-mail;
 - :ballot_box_with_check: It should be able to create an account (e-mail, name and password);
 

@@ -13,33 +13,33 @@ This project contains all the necessary boilerplate to setup a multi-tenant SaaS
 
 ### Organizations
 
-- :white_large_square: It should be able to create a new organization;
-- :white_large_square: It should be able to get organizations to which the user belongs;
-- :white_large_square: It should be able to update an organization;
-- :white_large_square: It should be able to shutdown an organization;
-- :white_large_square: It should be able to transfer organization ownership;
+- :ballot_box_with_check: It should be able to create a new organization;
+- :ballot_box_with_check: It should be able to get organizations to which the user belongs;
+- :ballot_box_with_check: It should be able to update an organization;
+- :ballot_box_with_check: It should be able to shutdown an organization;
+- :ballot_box_with_check: It should be able to transfer organization ownership;
 
 ### Invites
 
-- :white_large_square: It should be able to invite a new member (e-mail, role);
-- :white_large_square: It should be able to accept an invite;
-- :white_large_square: It should be able to revoke a pending invite;
+- :ballot_box_with_check: It should be able to invite a new member (e-mail, role);
+- :ballot_box_with_check: It should be able to accept an invite;
+- :ballot_box_with_check: It should be able to revoke a pending invite;
 
 ### Members
 
-- :white_large_square: It should be able to get organization members;
-- :white_large_square: It should be able to update a member role;
+- :ballot_box_with_check: It should be able to get organization members;
+- :ballot_box_with_check: It should be able to update a member role;
 
 ### Projects
 
-- :white_large_square: It should be able to get projects within a organization;
-- :white_large_square: It should be able to create a new project (name, url, description);
-- :white_large_square: It should be able to update a project (name, url, description);
-- :white_large_square: It should be able to delete a project;
+- :ballot_box_with_check: It should be able to get projects within a organization;
+- :ballot_box_with_check: It should be able to create a new project (name, url, description);
+- :ballot_box_with_check: It should be able to update a project (name, url, description);
+- :ballot_box_with_check: It should be able to delete a project;
 
 ### Billing
 
-- :white_large_square: It should be able to get billing details for organization ($20 per project / $10 per member excluding billing role);
+- :ballot_box_with_check: It should be able to get billing details for organization ($20 per project / $10 per member excluding billing role);
 
 ## RBAC
 

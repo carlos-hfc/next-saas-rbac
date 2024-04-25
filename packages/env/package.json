@@ -1,0 +1,23 @@
+{
+  "name": "@saas/env",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.ts",
+  "types": "index.ts",
+  "devDependencies": {
+    "@saas/eslint-config": "workspace:*",
+    "@saas/prettier": "workspace:*",
+    "@saas/tsconfig": "workspace:*",
+    "@types/node": "^20.12.7"
+  },
+  "prettier": "@saas/prettier",
+  "eslintConfig": {
+    "extends": [
+      "@saas/eslint-config/library"
+    ]
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.10.1",
+    "zod": "^3.23.4"
+  }
+}

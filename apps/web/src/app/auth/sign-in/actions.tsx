@@ -10,7 +10,7 @@ const signInSchema = z.object({
   password: z.string().min(1, { message: "Provide your password" }),
 })
 
-export async function signInWithCredentials(_: unknown, data: FormData) {
+export async function signInWithCredentials(data: FormData) {
   const result = signInSchema.safeParse(Object.fromEntries(data))
 
   if (!result.success) {

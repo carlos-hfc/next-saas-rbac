@@ -29,7 +29,7 @@ export default function ForgotPasswordPage() {
         size="sm"
         asChild
       >
-        <Link href="/auth/sign-up">Sign in instead</Link>
+        <Link href="/auth/sign-in">Sign in instead</Link>
       </Button>
     </form>
   )

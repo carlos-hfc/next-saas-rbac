@@ -1,7 +1,7 @@
 import { ChevronsUpDown, PlusCircle } from "lucide-react"
+import { cookies } from "next/headers"
 import Link from "next/link"
 
-import { getCurrentOrg } from "@/auth/auth"
 import { getOrganizations } from "@/http/get-organizations"
 
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
@@ -15,8 +15,9 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu"
 
-export async function OrganizationSwitcher() {
-  const currentOrg = await getCurrentOrg()
+export async function ProjectSwitcher() {
+  const currentOrg = cookies().get("org")?.value
+
   const { organizations } = await getOrganizations()
 
   const currentOrganization = organizations.find(org => org.slug === currentOrg)

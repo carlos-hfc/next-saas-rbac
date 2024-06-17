@@ -8,7 +8,9 @@ export function isAuthenticated() {
 }
 
 export async function auth() {
-  if (!isAuthenticated()) {
+  const token = cookies().get("token")?.value
+
+  if (!token) {
     redirect("/auth/sign-in")
   }
 
